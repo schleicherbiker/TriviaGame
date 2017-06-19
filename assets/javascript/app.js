@@ -12,7 +12,7 @@ function question(question, answers, correctAnswer) {
 }
 
 //Variables
-var questionTime = 3;
+var questionTime = 20;
 var qNum = 0;
 var correctNum = 0;
 var wrongNum = 0;

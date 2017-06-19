@@ -1,5 +1,5 @@
-body {
-    font-family: 'Pangolin', cursive;
+#content {
+    height: 100vh;
 }
 
 #title {
@@ -15,6 +15,7 @@ body {
     font-size: 80px;
     margin: 0px;
     font-weight: bold;
+    color: #f2cb00;
 }
 
 #secondTitle {
