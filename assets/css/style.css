@@ -1,0 +1,53 @@
+body {
+    font-family: 'Pangolin', cursive;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pangolin', cursive;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainTitle {
+    font-size: 80px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+#secondTitle {
+    position: relative;
+    font-size: 6px;
+    margin: 0px;
+    top: -12px;
+}
+
+.question {
+    background-color: red;
+    font-family: 'Pangolin', cursive;
+    font-size: 36px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 128px;
+
+    border: 2px black solid;
+}
+
+.answer {
+    background-color: green;
+    font-family: 'Pangolin', cursive;
+    font-size: 24px;
+
+    display: inline-block;
+    width: calc(50% - 20px);
+
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+    
+}

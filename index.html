@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Trivia Game</title>
+
+    <!--Css links-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!--Javascript Links-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!--Bootstrap Links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="title" class="col-md-8 col-md-offset-2 text-center">
+                <h1 id="mainTitle">Total Trivia Tango</h1>
+                <h2 id="secondTitle">What a Cool Title</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="time" class="col-xs-6 col-xs-offset-3 text-center">
+                <buton id="start" class="btn btn-primary btn-lg btn-block">Start</button>
+            </div>
+        </div>
+
+        <div id="questions" class="col-md-8 col-md-offset-2">
+            <div id="questionBox"></div>
+            <div id="answerBox"></div>
+        </div>
+    </div>
+</body>
+</html>
