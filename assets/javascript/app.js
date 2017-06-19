@@ -62,8 +62,10 @@ function drawQuestion(qNum) {
             console.log($(this).data("answer"));
             if ($(this).text() === $(this).data("answer")) {
                 correctNum++;
+                alert("you right");
             } else {
                 wrongNum++;
+                alert("you wrong");
             }
         })
         $("#answerBox").append(answer);
