@@ -28,7 +28,7 @@ function startGame() {
 }
 
 function startTimer(time) {
-    $("#time").empty();
+    $(".col-xs-offset-3").empty();
     $("#time").text("Time Remaining: " + time);
     timer = setInterval(function() {
         time--;

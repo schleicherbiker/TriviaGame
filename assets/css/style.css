@@ -13,25 +13,19 @@
     transform: scale(1);
   }
 }
+
+html * {
+    font-family: 'Pangolin', cursive;
+}
+
 #content {
     height: 100vh;
     border-left: 20px solid #b71e2c;
     border-right: 20px solid #b71e2c;
-    box-sizing: initial;
-    width: auto;
-}
-
-#title {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Pangolin', cursive;
-    height: auto;
-    justify-content: center;
-    align-items: center;
 }
 
 #mainTitle {
-    font-size: 98px;
+    font-size: 96px;
     margin: 128px 0px 128px 0px;
     font-weight: bold;
     color: #f2cb00;
@@ -49,16 +43,22 @@
 #start {
     background-color: #f2cb00;
     padding: 2vh;
-    font-family: 'Pangolin', cursive;
     font-size: 64px;
     font-weight: bold;
     color: #333;
+    width: 60%;
+    margin-left: 20%;
 
     border-radius: 50px;
     border: solid 8px #b71e2c;
 
     animation-duration: 1s;
     animation-name: bounceIn;
+
+    cursor: pointer;
+}
+#start:hover {
+    background-color: #f88a22;
 }
 
 .question {
