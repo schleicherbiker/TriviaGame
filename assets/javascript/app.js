@@ -1,7 +1,7 @@
 //Questions
 var questions = [];
 var q1 = new question("Who stars in the TV series Sherlock?", ["Benedict Cumberbatch", "Benjamin Cinderbatch", "Bimpleton Cabbagepatch", "Sherlock"], 2);
-//var q2 = new question("Is it 'Sex in the City' or 'Sex and the City'?", ["Sex in the City", "Sex and the City", "One in the show and the other is the movie", "Who Cares"], "Who Cares")
+var q2 = new question("Is it 'Sex in the City' or 'Sex and the City'?", ["Sex in the City", "Sex and the City", "One in the show and the other is the movie", "Who Cares"], "Who Cares")
 
 
 function question(question, answers, correctAnswer) {
@@ -43,14 +43,16 @@ function startTimer() {
     }, 1000)
 }
 
-function drawQuestion(qNum) {
+function drawQuestion() {
     //Draw the Question
+    $("#questionBox").empty();
     question = $("<div>");
     question.addClass("question")
     question.text(questions[qNum].question);
-    $("#questionBox").replaceWith(question);
+    $("#questionBox").append(question);
 
     //Draw the Answers
+    $("#answerBox").empty();
     for (i=0; i<questions[qNum].answers.length; i++) {
         answer = $("<div>");
         answer.addClass("text-center answer");
@@ -58,15 +60,15 @@ function drawQuestion(qNum) {
         answer.data("answer", questions[qNum].answers[questions[qNum].correctAnswer]);
         //On answer click...
         answer.click(function() {
-            console.log($(this).text());
-            console.log($(this).data("answer"));
+            qNum++;
             if ($(this).text() === $(this).data("answer")) {
                 correctNum++;
-                alert("you right");
+            
             } else {
                 wrongNum++;
                 alert("you wrong");
             }
+            drawQuestion();
         })
         $("#answerBox").append(answer);
     }
