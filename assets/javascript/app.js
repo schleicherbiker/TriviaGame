@@ -17,12 +17,10 @@ var unansweredNum = 0;
 var canAnswer = false;
 var timer;
 
-
 //Start Game when button is pressed
 $(document).ready(function() {
     //Draw start screen
     drawStart();
-    $("#start").click(function() {drawQuestion()});
 })
 
 function drawStart() {
@@ -57,8 +55,9 @@ function startTimer(time) {
         timeDiv.text(time);
         if (time <= 0) {
             answeredQuestion(false);
+            clearInterval(timer);
         }
-    }, 1000)
+    }, 1000);
     $("#main1").append(timeDiv);
 }
 
@@ -114,7 +113,6 @@ function answeredQuestion(question) {
     else {
         wrongNum++;
         $("#" + $(question).attr("id")).css("backgroundColor", "red");
-        console.log($("#"+$(question).attr("id")).css("backgroundColor"));
     }
 
     clearInterval(timer);
